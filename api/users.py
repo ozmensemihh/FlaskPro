@@ -1,4 +1,5 @@
-from flask import Flask,Blueprint,jsonify
+from flask import Flask,Blueprint,jsonify, request
+from ecommerce.mdels import User
 
 apiUsers =Blueprint('apiUser',__name__,url_prefix='/api/users')
 
@@ -13,6 +14,12 @@ def user(id):
     return jsonify({"success":True, "userİd":id})
     
 
-@apiUsers.route("/addUser",methods=['GET','POST','PUT','DELETE'])
+@apiUsers.route("/addUser",methods=['GET','POST'])
 def addUser():
- return jsonify({"success":True, "message":"User Added"})    
+    if request.method == 'POST':
+        user  = User (None,
+        request.form.get("username"),
+        request.form.get("email"),
+        request.form.get("password"))
+        user.addUser()
+    return jsonify({"success":True, "message":"User Added"})    

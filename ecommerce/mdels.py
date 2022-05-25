@@ -18,7 +18,7 @@ class User(db.Model):
         self.username = username
         self.email = email
         self.password = password
-     
+         
 
 
 @dataclass
