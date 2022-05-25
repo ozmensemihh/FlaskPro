@@ -57,4 +57,4 @@ class Product(db.Model):
     price = db.Column(db.Float)
     oldPrice = db.Column(db.Float)
     description = db.Column(db.String(120))
-    category_id = db.Column(db.Integer,db.ForeingKey("Category.id"))  
+    category_id = db.Column(db.Integer,db.ForeignKey('Category.id'))

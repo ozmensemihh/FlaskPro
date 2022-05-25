@@ -12,3 +12,7 @@ def index():
 def user(id):
     return jsonify({"success":True, "userİd":id})
     
+
+@apiUsers.route("/addUser",methods=['GET','POST','PUT','DELETE'])
+def addUser():
+ return jsonify({"success":True, "message":"User Added"})    

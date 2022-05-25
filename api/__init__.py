@@ -1,5 +1,4 @@
-from.users import apiUsers
-from .users import apiProducts
-from .users import apiAdmin
-from .users import apiCategory
-
+from .users import apiUsers
+from .products import apiProducts
+from .admin import apiAdmin
+from .categories import apiCategory
