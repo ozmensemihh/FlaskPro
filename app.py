@@ -1,5 +1,4 @@
-from distutils.debug import DEBUG
-from distutils.log import debug
+
 from flask import Flask,jsonify
 from api.users import apiUsers
 from api.products import apiProducts
